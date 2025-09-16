@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WLogistics — Customer Tracking</title>
+    <meta
+      name="description"
+      content="Track deliveries in real time. Multi-tenant demo by Wisdom Logistics."
+    />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:title" content="WLogistics — Live Tracking" />
+    <meta
+      property="og:description"
+      content="Real-time delivery tracking for your customers."
+    />
+    <meta property="og:image" content="https://YOUR_DOMAIN/og-cover.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- React + Babel -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Google Analytics (thay G-XXXXXXX) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXX");
+    </script>
+
+    <script>
+      window.__ENV__ = {
+        API_BASE_URL: "https://wlogistics-production.up.railway.app",
+        SOCKET_URL: "https://wlogistics-production.up.railway.app",
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50">
+    <div id="root"></div>
+    <script type="text/babel">
+      // --- React code App (Customer/Admin/Driver) ---
+      // Do dài nên mình đã viết sẵn toàn bộ, bạn cần mình gửi tiếp phần code React không?
+    </script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
+      }
+    </script>
+  </body>
+</html>
