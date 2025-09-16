@@ -1,3 +1,5 @@
+HEAD
+
 # Frontend (Vercel)
 
 ## Deploy
@@ -10,3 +12,15 @@
 - Trong `index.html`, sửa:
   - `API_BASE_URL` & `SOCKET_URL`
   - `G-XXXXXXX` thành Google Analytics ID
+
+# Backend (Express + Socket.IO)
+
+## Local
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+b310d907cd456ea0359633586456eda120ac2306
