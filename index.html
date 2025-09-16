@@ -21,59 +21,18 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#2563eb" />
 
-    <!-- Tailwind -->
+    <!-- Tailwind CDN (dùng nhanh, không cần build PostCSS) -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- React + Babel -->
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.production.min.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-    ></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!-- Leaflet -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- Google Analytics (thay G-XXXXXXX) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXX");
-    </script>
 
     <script>
       window.__ENV__ = {
-        API_BASE_URL: "https://wlogistics-backend.up.railway.app",
+        API_BASE_URL: "https://wlogistics-backend-production.up.railway.app",
         SOCKET_URL: "https://wlogistics-backend.up.railway.app",
       };
     </script>
   </head>
   <body class="bg-gray-50">
     <div id="root"></div>
-    <script type="text/babel">
-      // --- React code App (Customer/Admin/Driver) ---
-      // Do dài nên mình đã viết sẵn toàn bộ, bạn cần mình gửi tiếp phần code React không?
-    </script>
-
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/sw.js");
-      }
-    </script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

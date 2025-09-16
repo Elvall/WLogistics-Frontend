@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WLogistics — Customer Tracking</title>
+    <meta
+      name="description"
+      content="Track deliveries in real time. Multi-tenant demo by Wisdom Logistics."
+    />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:title" content="WLogistics — Live Tracking" />
+    <meta
+      property="og:description"
+      content="Real-time delivery tracking for your customers."
+    />
+    <meta property="og:image" content="https://YOUR_DOMAIN/og-cover.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#2563eb" />
+    <!-- Tailwind CDN (tạm dùng; sau có thể cấu hình Tailwind postcss) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GA (đổi G-XXXXXXX) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXX");
+    </script>
+    <script>
+      window.__ENV__ = {
+        API_BASE_URL: "https://wlogistics-backend.up.railway.app",
+        SOCKET_URL: "https://wlogistics-backend.up.railway.app",
+      };
+    </script>
+    <script type="module" crossorigin src="/assets/index-DnkO9dvZ.js"></script>
+  </head>
+  <body class="bg-gray-50">
+    <div id="root"></div>
+    <!-- Vite entry -->
+  </body>
+</html>
